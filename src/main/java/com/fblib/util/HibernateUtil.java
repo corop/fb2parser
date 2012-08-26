@@ -1,5 +1,6 @@
 package com.fblib.util;
 
+import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -15,7 +16,7 @@ import org.hibernate.service.ServiceRegistryBuilder;
  * To change this template use File | Settings | File Templates.
  */
 public class HibernateUtil {
-
+    private static final Logger log = Logger.getLogger(HibernateUtil.class);
     private static final SessionFactory sessionFactory;
     private static final ServiceRegistry serviceRegistry;
 
@@ -26,6 +27,7 @@ public class HibernateUtil {
             serviceRegistry = new ServiceRegistryBuilder().applySettings(configuration.getProperties()).buildServiceRegistry();
             sessionFactory = configuration.buildSessionFactory(serviceRegistry);
         } catch (Throwable ex) {
+            log.fatal("");
             throw new ExceptionInInitializerError(ex);
         }
     }

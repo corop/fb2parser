@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/test?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8
+        </property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">kadavr</property>
+        <property name="hibernate.hbm2ddl.auto">create-drop</property> <!-- update -->
+
+        <!-- Hibernate Search -->
+        <!-- org.hibernate.search.store.FSDirectoryProvider -->
+        <!-- org.hibernate.search.store.RAMDirectoryProvider for test -->
+        <property name="hibernate.search.default.directory_provider">
+            org.hibernate.search.store.RAMDirectoryProvider
+        </property>
+        <property name="hibernate.search.default.indexBase">
+            /home/magnus/tmp/lucene/indexes
+        </property>
+
+        <!-- Mapped classes -->
+        <mapping class="com.fblib.entity.Genre" />
+    </session-factory>
+</hibernate-configuration>
