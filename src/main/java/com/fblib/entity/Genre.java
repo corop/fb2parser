@@ -18,11 +18,12 @@ import java.io.Serializable;
 @Table(name = "GENRE")
 public class Genre implements Serializable {
     @Id
-    @GeneratedValue
+    @Column(name = "GENRE_ID", updatable = false)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
-    @NotNull @Column(name = "NAME")
+    @NotNull @Column(name = "NAME", nullable = false, length = 64)
     private String name;
-    @NotNull @Column(name = "FB_NAME")
+    @NotNull @Column(name = "FB_NAME", nullable = false, length = 24)
     private String fbName;
 
 
