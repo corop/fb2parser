@@ -5,11 +5,9 @@ import java.io.Serializable;
 /**
  * Created with IntelliJ IDEA.
  * User: asergeev
- * Date: 25.08.12
- * Time: 17:45
+ * Date: 26.08.12
+ * Time: 22:21
  * To change this template use File | Settings | File Templates.
  */
-public class Seria implements Serializable {
-    private Long id;
-    private String name;
+public class User implements Serializable {
 }

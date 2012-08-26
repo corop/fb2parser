@@ -13,7 +13,7 @@ import java.io.Serializable;
 public class Book implements Serializable {
     private Long id;
     private String name;
-    private String author;
+    private Author author;
     private String description;
     private Integer ratio;
     private Genre genre;
