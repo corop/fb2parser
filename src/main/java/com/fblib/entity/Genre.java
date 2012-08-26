@@ -8,7 +8,8 @@ package com.fblib.entity;
  * To change this template use File | Settings | File Templates.
  */
 public class Genre {
-    private long id;
+    private Long id;
+    private Long fbVersion;
     private String name;
     private String fbTag;
 

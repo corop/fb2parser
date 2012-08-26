@@ -8,6 +8,6 @@ package com.fblib.entity;
  * To change this template use File | Settings | File Templates.
  */
 public class Seria {
-    private long id;
+    private Long id;
     private String name;
 }

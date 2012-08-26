@@ -11,11 +11,11 @@ import java.io.Serializable;
  * To change this template use File | Settings | File Templates.
  */
 public class Book implements Serializable {
-    private String id;
+    private Long id;
     private String name;
     private String author;
     private String description;
-    private int ratio;
+    private Integer ratio;
     private Genre genre;
     private Seria seria;
     private String coverId;
