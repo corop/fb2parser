@@ -32,6 +32,9 @@ public class Book implements Serializable {
     private Integer ratio;
     @NaturalId
     @ManyToOne
+    private CategoryGenre categoryGenre;
+    @NaturalId
+    @ManyToOne
     private Genre genre;
     @NaturalId
     @ManyToOne
